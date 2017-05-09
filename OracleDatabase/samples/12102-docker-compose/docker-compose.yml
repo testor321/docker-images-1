@@ -3,8 +3,6 @@ services:
   database:
     image: oracle/database:12.1.0.2-ee
     volumes:
-      - /home/oracle/oradata:/opt/oracle/oradata # persistent oracle database data.
+      - /opt/sw/docker/dbee12102:/opt/oracle/oradata # persistent oracle database data.
     ports:
       - 1521:1521
-      - 8080:8080
-      - 5500:5500
