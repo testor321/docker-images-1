@@ -1,1 +1,3 @@
 .DS_Store
+dockerfiles/12.1.0.2/linuxamd64_12102_database_1of2.zip
+dockerfiles/12.1.0.2/linuxamd64_12102_database_2of2.zip

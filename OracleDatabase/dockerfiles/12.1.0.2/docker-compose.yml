@@ -1,0 +1,14 @@
+version: '2'
+services:
+  database:
+    build:
+      context: /opt/sw/support/git/public/docker-images-1/OracleDatabase/dockerfiles/12.1.0.2
+      dockerfile: Dockerfile.ee
+    container_name: bgee121-a1
+    image: docker-001.bluegarden.tst:5000/bgee121:bsb
+    ports:
+      - "172.23.4.105:1521:1521"
+    restart: unless-stopped
+    tmpfs:
+      - /run
+      - /tmp

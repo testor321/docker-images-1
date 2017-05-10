@@ -21,7 +21,7 @@
 #
 # Pull base image
 # ---------------
-FROM oraclelinux:7-slim
+FROM docker-001.bluegarden.tst:5000/oraclelinux
 
 # Maintainer
 # ----------
@@ -73,7 +73,7 @@ USER oracle
 WORKDIR /home/oracle
 
 VOLUME ["$ORACLE_BASE/oradata"]
-EXPOSE 1521 5500
+EXPOSE 1521
     
 # Define default command to start Oracle Database. 
 CMD exec $ORACLE_BASE/$RUN_FILE
