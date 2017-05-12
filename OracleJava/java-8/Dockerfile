@@ -2,7 +2,8 @@
 #
 # Copyright (c) 2015 Oracle and/or its affiliates. All rights reserved.
 #
-FROM oraclelinux:7-slim
+
+FROM docker-001.bluegarden.tst:5000/oraclelinux
 
 MAINTAINER Bruno Borges <bruno.borges@oracle.com>
 
