@@ -24,7 +24,7 @@
 # Pull base image
 # From the Oracle Registry
 # -------------------------
-FROM oracle/serverjre:8
+FROM docker-001.bluegarden.tst:5000/serverjre:8
 
 # Maintainer
 # ----------
@@ -50,7 +50,7 @@ COPY container-scripts/createAndStartEmptyDomain.sh container-scripts/create-wls
 
 ENV SCRIPT_FILE=/u01/oracle/createAndStartEmptyDomain.sh \
     DOMAIN_NAME="${DOMAIN_NAME:-base_domain}" \
-    DOMAIN_HOME=/u01/oracle/user_projects/domains/${DOMAIN_NAME:-base_domain} \
+    DOMAIN_HOME=/u01/oracle/user_projects/domains/"${DOMAIN_NAME:-base_domain}" \
     ADMIN_PORT="${ADMIN_PORT:-7001}" 
 
 # Environment variables required for this build (do NOT change)
